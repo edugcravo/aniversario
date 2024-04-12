@@ -1,0 +1,324 @@
+.container {
+    background-color: #F9FAF5;
+    height: 100%;
+}
+
+.bloco-foto-principal {
+    width: 100%;
+}
+
+.bloco-foto-principal img {
+    width: 100%;
+    object-fit: cover; /* Impede a distorção da imagem */
+}
+
+@media only screen and (max-width: 767px) {
+    /* Estilos para dispositivos móveis */
+    .bloco-foto-principal .nanda {
+        height: 490px; /* Define a altura desejada para a imagem */
+        width: 100%; /* Define a largura como automática para manter a proporção */
+    }
+
+    .recorte{
+        position: relative;
+        top: -102px;
+    }
+}
+
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -23px;
+    margin-bottom: 140px;
+}
+
+.apresentacao span{
+    color: #989F8A;
+    padding: 5px 30px;
+    line-height: 25px;
+    border: 1px solid #989F8A;
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+.titulo_apresentacao{
+    text-align: center;
+}
+
+.titulo_apresentacao h1{
+    color: #74617E;
+    font-size: 70px;
+    line-height: 75px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.titulo_apresentacao h2{
+    font-size: 25px;
+    color: #B2A6D1;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.aspas{
+    font-size: 20px;
+    color: #989F8A;
+}
+
+.aspas p{
+   margin: 10px; 
+   font-family: sans-serif;
+}
+
+.aspa{
+    width: 30px;
+}
+
+.invertida{
+    transform: rotate(180deg);
+}
+
+.contagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flor{
+    position: relative;
+    width: 170px;
+    top: -404px;
+    left: -107px;
+    z-index: 100;
+}
+
+.blocos{
+    margin-top: -512px;
+    z-index: 1;
+    text-align: center;
+}
+
+.conteudo-blocos{
+    display: flex;
+    justify-content: center;
+}
+
+.bloco{
+    text-align: center;
+    border-right: 1px solid #B2A6D1;
+    padding: 0px 8px;
+}
+
+.ultimo{
+    border-right: none;
+}
+
+.icon-circulo{
+    width: 360px;
+    height: 360px;
+    position: relative;
+}
+.faltam{
+    font-size: 45px;
+    color: #74617E;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+
+.bloco h1{
+    font-size: 35px;
+    margin-bottom: 0px;
+    color: #74617E;
+    font-family: sans-serif;
+}
+
+.bloco p{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #989F8A;
+}
+
+.heart {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+    margin-top: 15px;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bola {
+    position: relative; /* ou position: absolute; */
+    width: 287px;
+    height: 287px;
+    margin-top: -264px; /* Ajuste conforme necessário */
+    z-index: -1; /* Um valor negativo para ficar por baixo */
+    border-radius: 50%; /* Torna o elemento redondo */
+    background-color: white; /* Cor da bola (substitua pela cor desejada) */
+    box-shadow: 0 0 20px 10px #c6c6c652; /* Adiciona sombra com efeito de esfumaçado */
+}
+
+.festa{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background: rgb(116, 97, 126);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 10px #c6c6c6; /* Adiciona sombra com efeito de esfumaçado */
+}
+
+.bloco-festa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background-image: url('../../../assets/imagens/linhas.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.conteudo-festa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.conteudo-festa h1{
+    margin-bottom: 0px;
+    padding: 0px 30px;
+    font-size: 40px;
+    background-color: #74617E;
+    color: white;
+    width: 50%;
+    max-width: 378px;
+    text-align: center;
+}
+
+.conteudo-festa::before {
+    content: "";
+    background-image: url('../../../assets/imagens/cinta-before.svg');
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 55px;
+    width: 18px;
+    left: 1px;
+    position: relative;
+
+}
+
+.conteudo-festa::after{
+    content: "";
+    background-image: url('../../../assets/imagens/cinta-before.svg');
+    content: '';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 55px;
+    width: 18px;
+    /* rotacionar imagem */
+    transform: scaleX(-1);
+    right: 1px;
+    position: relative;
+
+}
+
+.dia, .local, .endereco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dia h1, .local h1, .endereco h1{
+    font-size: 25px;
+    color: #74617E;
+    margin-bottom: 0px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.dia p, .local p, .endereco p{
+    font-size: 20px;
+    color: #989F8A;
+    font-family: sans-serif;
+}
+
+.dia button, .local button, .endereco button{
+    width: 70%;
+    color: white;
+    font-family: sans-serif;
+    background-color: #B2A6D1;
+    padding: 18px 30px;
+    border: none;
+    line-height: 15px;
+    font-size: 17px;
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.40);
+    border-radius: 50px;
+}
+
+.primeiro, .segundo, .terceiro{
+    margin-bottom: 45px;
+}
+
+.infos{
+    background-image: url('../../../assets/imagens/fundo.webp');
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position-x: -85px;
+    background-position-y: 64px;
+}
+
+.onda{
+    margin-top: 80px;
+}
+
+.imagens{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagens h1{
+    font-size: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    text-align: center;
+    color: #74617E;
+    font-weight: 700;
+}
+
+.imagens p{
+    font-size: 19px;
+    padding: 0 15px;
+    margin-top: 25px;
+    color: #989F8A;
+    font-family: sans-serif;
+}
