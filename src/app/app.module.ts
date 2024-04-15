@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { routing } from './app.routing';
+import { CarouselModule } from 'primeng/carousel';
  // Import the SlickCarouselModule from the correct package
 
 
@@ -20,6 +21,7 @@ import { routing } from './app.routing';
         BrowserModule,
         routing,
         HttpClientModule,
+        CarouselModule
 
         
     ],

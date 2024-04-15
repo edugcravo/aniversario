@@ -322,3 +322,31 @@
     color: #989F8A;
     font-family: sans-serif;
 }
+
+.image-carousel-item {
+    width: 100%;
+    object-fit: contain; /* Manter a proporção original */
+    border: 10px solid white; /* Borda branca */
+    border-radius: 20px; /* Borda arredondada */
+    max-height: 400px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+
+
+::ng-deep #pn_id_1 li button{
+    background-color: #B2A6D1 ;
+    margin: 0px 5px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+::ng-deep #pn_id_1 > div > ul > li.p-carousel-indicator.p-highlight > button{
+    background-color: #74617E !important;
+}
+
+.divisao{
+    margin-top: 90px;
+}
