@@ -350,3 +350,77 @@
 .divisao{
     margin-top: 90px;
 }
+
+.instrucoes h1{
+    font-size: 45px;
+    color:#74617E;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.instrucoes p{
+    font-size: 19px;
+    padding: 0 15px;
+    font-family: sans-serif;
+    color: #989F8A;
+    text-align: center;
+}
+
+.bloco-instrucoes{
+    margin-top: -202px;
+}
+
+.bloco-instrucao{
+    text-align: center;
+    background-color: #F9FAF5;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 0px #B2A6D1;
+    margin: 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bloco-instrucao h1{
+    font-size: 22px;
+    color: #74617E;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.bloco-instrucao p{
+    font-size: 16px;
+    color: #989F8A;
+    font-family: sans-serif;
+}
+
+.bloco-instrucao svg{
+    margin: 20px 0;
+width: 75px !important;
+height: 75px !important;
+}
+
+.bloco-instrucao button{
+    background-color: #B2A6D1;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 50px;
+    line-height: 15px;
+    font-size: 17px;
+    padding: 18px 30px;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+}
+
+.flor-info{
+    position: relative;
+    top: 164px;
+    left: -35px;
+    z-index: 0;
+    width: 195px;
+}
