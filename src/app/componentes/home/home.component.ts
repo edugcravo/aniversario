@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
-
+import Swal from 'sweetalert2';
 // define "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
 
@@ -20,9 +20,13 @@ export class HomeComponent implements OnInit {
 
   // Carousel
   products = [
-    {source: 'assets/imagens/carrosel/foto2.jpg', alt: 'Description for Image 2', title: 'Title 2'},
-    {source: 'assets/imagens/carrosel/foto3.jpg', alt: 'Description for Image 3', title: 'Title 3'},
-    {source: 'assets/imagens/carrosel/foto4.jpg', alt: 'Description for Image 4', title: 'Title 4'},
+    {source: 'assets/imagens/fotos/crianca.jpg', alt: 'Description for Image 2', title: 'Title 2'},
+    {source: 'assets/imagens/fotos/crianca2.jpg', alt: 'Description for Image 3', title: 'Title 3'},
+    {source: 'assets/imagens/fotos/crianca3.jpg', alt: 'Description for Image 4', title: 'Title 4'},
+    {source: 'assets/imagens/fotos/crianca4.jpg', alt: 'Description for Image 5', title: 'Title 5'},
+    {source: 'assets/imagens/fotos/crianca5.jpg', alt: 'Description for Image 6', title: 'Title 6'},
+    {source: 'assets/imagens/fotos/adulto.jpg', alt: 'Description for Image 7', title: 'Title 7'},
+    {source: 'assets/imagens/fotos/adulto2.jpg', alt: 'Description for Image 8', title: 'Title 8'},
   ]
 
   responsiveOptions = [
@@ -72,4 +76,60 @@ agendarEvento() {
   window.open(linkGoogleAgenda, '_blank');
 }
 
+modalDress(){
+  Swal.fire({
+    title: "Dress Code",
+    text: "Traje Esporte Fino",
+    customClass: {
+      title: 'title-class',
+      image: 'image-class',
+      
+    },
+    imageUrl: 'https://fixdate.io/modelo-invitacion/52/img/vestuario.svg',
+    imageWidth: 100,
+    imageHeight: 100,
+    width: 600,
+    padding: "3em",
+    color: "#716add",
+    background: "#fff url(/images/trees.png)",
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("/images/nyan-cat.gif")
+      left top
+      no-repeat
+    `
+  });
+}
+
+modalDicas(){
+  Swal.fire({
+    title: "Dicas para o evento",
+    text: "",
+    html: `
+        <div style="text-align: left; line-height: 1.5;">
+            <p style="font-family: sans-serif !important;"><strong style="font-family: sans-serif !important;">Chegue cedo:</strong> Chegar cedo permite que você aproveite todos os momentos especiais da festa, incluindo a cerimônia de abertura e as apresentações.</p>
+            <p style="font-family: sans-serif !important;"><strong style="font-family: sans-serif !important;">Siga o Dress Code:</strong> Respeite o traje sugerido para a festa, garantindo que você esteja vestido adequadamente para a ocasião.</p>
+            <p style="font-family: sans-serif !important;"><strong style="font-family: sans-serif !important;">Quando chegar:</strong> Não esqueça de escanear o QR CODE que levará direto para o meu filtro do Instagram!.</p>
+        </div>
+    `,
+    customClass: {
+      title: 'title-class',
+      image: 'image-class-dicas',
+      
+    },
+    imageUrl: 'https://fixdate.io/modelo-invitacion/52/img/tips.svg',
+    imageWidth: 100,
+    imageHeight: 100,
+    width: 600,
+    padding: "3em",
+    color: "#716add",
+    background: "#fff url(/images/trees.png)",
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("/images/nyan-cat.gif")
+      left top
+      no-repeat
+    `
+  });
+}
 }

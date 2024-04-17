@@ -5,11 +5,46 @@
 
 .bloco-foto-principal {
     width: 100%;
+    position: relative;
 }
 
 .bloco-foto-principal img {
     width: 100%;
     object-fit: cover; /* Impede a distorção da imagem */
+}
+
+.title-class{
+    color: red !important;
+}
+
+::ng-deep #swal2-title{
+    padding-top: 0;
+}
+
+::ng-deep .image-class{
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+::ng-deep .image-class-dicas{
+    position: absolute;
+    top: -11%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+::ng-deep #swal2-html-container{
+    font-family: sans-serif !important;
+    color: #989F8A !important;
+}
+
+
+.onda-fundo-insta{
+    position: relative;
+    top: -3px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -19,9 +54,12 @@
         width: 100%; /* Define a largura como automática para manter a proporção */
     }
 
-    .recorte{
-        position: relative;
-        top: -102px;
+
+    .nova-imagem {
+        position: absolute;
+        bottom: -1px; 
+        left: 0;
+        width: 100%;
     }
 }
 
