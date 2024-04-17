@@ -1,8 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 
 import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
 import Swal from 'sweetalert2';
+import { Subject, interval, takeUntil } from 'rxjs';
 // define "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
 
@@ -11,11 +12,39 @@ defineElement(lottie.loadAnimation);
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   
-  constructor() { }
-  ngOnInit() {
+  diferenca!: { dias: number; horas: number; minutos: number; segundos: number; };
+  private destroy$: Subject<void> = new Subject<void>();
 
+  constructor() { }
+
+  ngOnInit(): void {
+    const aniversario: Date = new Date('2024-05-18T00:00:00');
+
+    interval(1000)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        const agora: Date = new Date();
+        const diferenca: number = aniversario.getTime() - agora.getTime();
+
+        if (diferenca <= 0) {
+          this.diferenca = { dias: 0, horas: 0, minutos: 0, segundos: 0 };
+        } else {
+          const segundosTotais: number = Math.floor(diferenca / 1000);
+          const dias: number = Math.floor(segundosTotais / (3600 * 24));
+          const horas: number = Math.floor((segundosTotais % (3600 * 24)) / 3600);
+          const minutos: number = Math.floor((segundosTotais % 3600) / 60);
+          const segundos: number = segundosTotais % 60;
+
+          this.diferenca = { dias, horas, minutos, segundos };
+        }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   // Carousel
