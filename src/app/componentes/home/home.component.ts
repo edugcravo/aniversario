@@ -42,5 +42,34 @@ export class HomeComponent implements OnInit {
         numScroll: 1
     }
 ];
- 
+
+
+redirecionarParaWhatsapp() {
+  // Número de telefone do WhatsApp (substitua pelo seu número)
+  const numeroWhatsapp = '5541998638979';
+  // Mensagem pré-pronta
+  const mensagem = 'Olá jaque, Pode me confirmar na festa da nanda';
+
+  // Cria o link para o WhatsApp com o número e a mensagem
+  const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+
+  // Redireciona para o WhatsApp
+  window.open(url, '_blank');
+}
+
+agendarEvento() {
+  // Data e hora do evento (ajuste conforme necessário)
+  const dataHoraEvento = new Date('2024-05-18T18:30:00');
+
+  // Formatar data e hora para o formato necessário pelo Google Agenda
+  const dataInicio = dataHoraEvento.toISOString().replace(/-|:|\.\d+/g, '');
+  const dataFim = new Date(dataHoraEvento.getTime() + 60 * 60 * 1000).toISOString().replace(/-|:|\.\d+/g, '');
+
+  // Montar o link do Google Agenda com os dados do evento
+  const linkGoogleAgenda = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aniversario+Maria+Fernanda&dates=${dataInicio}/${dataFim}&details=Detalhes+do+Evento&location=Villagio+Di+Trento`;
+
+  // Abrir o link em uma nova aba
+  window.open(linkGoogleAgenda, '_blank');
+}
+
 }
